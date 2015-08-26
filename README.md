@@ -8,6 +8,10 @@ The plugin is written using ES6 and compiled with [Babel](babeljs.io) and [Brows
 
 Feel free to follow me on twitter [@netcell](https://twitter.com/netcell) and check out [my blog](http://anhnt.ninja)!
 
+## Demo
+
+Check the `example` folder or try that example rightaway on [this codepen](http://codepen.io/netcell/full/XmrWod/). The example includes a [dat.gui](https://github.com/dataarts/dat.gui) control panel that you can play with.
+
 ## Download
 
 The source is available for download from [latest release](https://github.com/netcell/nine-patch-phaser-plugin/releases) or by cloning the repository or download the files in `build` folder. Alternatively, you can install via:
