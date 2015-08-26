@@ -10,7 +10,7 @@ Feel free to follow me on twitter [@netcell](https://twitter.com/netcell) and ch
 
 ## Download
 
-The source is available for download from [latest release](https://github.com/netcell/nine-patch-phaser-plugin/releases) by cloning the repository or download the files in `build` folder. Alternatively, you can install via:
+The source is available for download from [latest release](https://github.com/netcell/nine-patch-phaser-plugin/releases) or by cloning the repository or download the files in `build` folder. Alternatively, you can install via:
 - [bower](http://bower.io/): `bower install --save nine-patch-phaser-plugin`
 
 ## Usage
