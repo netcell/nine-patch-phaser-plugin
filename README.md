@@ -6,6 +6,13 @@ This is not technically a Phaser Plugin. It provides two methods in `game.cache`
 
 The plugin is written using ES6 and compiled with [Babel](babeljs.io) and [Browserify](http://browserify.org/), tested on Phaser 2.1.3 and Phaser 2.4.3.
 
+Feel free to follow me on twitter ([@netcell](https://twitter.com/netcell) and check out [my blog](http://anhnt.ninja)!
+
+## Download
+
+The source is available for download from [latest release](https://github.com/netcell/nine-patch-phaser-plugin/releases) by cloning the repository or download the files in `build` folder. Alternatively, you can install via:
+- [bower](http://bower.io/): `bower install --save nine-patch-phaser-plugin`
+
 ## Usage
 
 Simply download the `nine-patch-phaser-plugin.js` or `nine-patch-phaser-plugin.min.js` script from [latest release](https://github.com/netcell/nine-patch-phaser-plugin/releases) and include it on your page after including Phaser:
@@ -34,7 +41,7 @@ To change the measures of the NinePatchImage, change the `targetWidth` and `targ
 
 Check the example in `example` folder to see it in action :)
 
-## Download
+### License ###
 
-The source is available for download from [latest release](https://github.com/netcell/nine-patch-phaser-plugin/releases) by cloning the repository or download the files in `build` folder. Alternatively, you can install via:
-- [bower](http://bower.io/): `To be updated`
+This content is released under the (http://opensource.org/licenses/MIT) MIT License.
+
