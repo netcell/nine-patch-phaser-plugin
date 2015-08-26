@@ -8,7 +8,7 @@ The plugin is written using ES6 and compiled with [Babel](babeljs.io) and [Brows
 
 ## Usage
 
-Simply download the `nine-patch-phaser-plugin.js` or `nine-patch-phaser-plugin.min.js` script in the `build` folder and include it on your page after including Phaser:
+Simply download the `nine-patch-phaser-plugin.js` or `nine-patch-phaser-plugin.min.js` script from [latest release](https://github.com/netcell/nine-patch-phaser-plugin/releases) and include it on your page after including Phaser:
 
 ```html
 <script src="phaser.js"></script>
@@ -36,7 +36,5 @@ Check the example in `example` folder to see it in action :)
 
 ## Download
 
-The source is available for download by cloning the repository or download the files in `build` folder. Alternatively, you can install via:
-
-- [npm](https://www.npmjs.com/): `To be updated`
+The source is available for download from [latest release](https://github.com/netcell/nine-patch-phaser-plugin/releases) by cloning the repository or download the files in `build` folder. Alternatively, you can install via:
 - [bower](http://bower.io/): `To be updated`
