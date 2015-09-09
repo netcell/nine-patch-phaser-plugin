@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Nine-patch-phaser-plugin by netcell</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Nine-patch-phaser-plugin</h1>
+      <h2 class="project-tagline">A Nine Patch Plugin for Phaser</h2>
+      <a href="https://github.com/netcell/nine-patch-phaser-plugin" class="btn">View on GitHub</a>
+      <a href="https://github.com/netcell/nine-patch-phaser-plugin/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/netcell/nine-patch-phaser-plugin/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="nine-patch-phaser-plugin" class="anchor" href="#nine-patch-phaser-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nine Patch Phaser Plugin</h1>
+
+<p>Nine Patch Phaser Plugin allows you to use <a href="https://github.com/chrislondon/9-Patch-Image-for-Websites/wiki/What-Are-9-Patch-Images">nine patch images</a> in the HTML game framework <a href="http://phaser.io">Phaser</a>.</p>
+
+<p>This is not technically a Phaser Plugin. It provides two methods in <code>game.cache</code> to generate nine patch textures and a <code>Phaser.NinePatchImage</code> class to create nine patch images from these textures.</p>
+
+<p>The plugin is written using ES6 and compiled with <a href="babeljs.io">Babel</a> and <a href="http://browserify.org/">Browserify</a>, tested on Phaser 2.1.3 and Phaser 2.4.3.</p>
+
+<p>Feel free to follow me on twitter <a href="https://twitter.com/netcell">@netcell</a> and check out <a href="http://anhnt.ninja">my blog</a>!</p>
+
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<p>Check the <code>example</code> folder or try that example rightaway on <a href="http://codepen.io/netcell/full/XmrWod/">this codepen</a>. The example includes a <a href="https://github.com/dataarts/dat.gui">dat.gui</a> control panel that you can play with.</p>
+
+<h2>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download</h2>
+
+<p>The source is available for download from <a href="https://github.com/netcell/nine-patch-phaser-plugin/releases">latest release</a> or by cloning the repository or download the files in <code>build</code> folder. Alternatively, you can install via:</p>
+
+<ul>
+<li>
+<a href="http://bower.io/">bower</a>: <code>bower install --save nine-patch-phaser-plugin</code>
+</li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Simply download the <code>nine-patch-phaser-plugin.js</code> or <code>nine-patch-phaser-plugin.min.js</code> script from <a href="https://github.com/netcell/nine-patch-phaser-plugin/releases">latest release</a> and include it on your page after including Phaser:</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>phaser.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>nine-patch-phaser-plugin.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>In the <code>create</code> method in your preloading states (to make sure the image/spritesheet/atlas is loaded), use <code>game.cache.addNinePatch</code> method to create the nine patch textures:</p>
+
+<div class="highlight highlight-javascript"><pre>game.cache.addNinePatch(name, key, frame, left, right, top, bottom);</pre></div>
+
+<ul>
+<li>
+<code>name</code> is the reference key that would be used later to get the nine patch textures</li>
+<li>
+<code>key</code> is a key string of the image/spritesheet/atlas loaded</li>
+<li>
+<code>frame</code> is the optional index of the frame if the nine patch image is on a spritesheet or atlas, can be either string or number</li>
+<li>
+<code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code> are the left most, right most, top most and bottom most points of the center patch in the nine patch image.</li>
+</ul>
+
+<p>After that, in your game, you can create a nine patch image as follow:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> image <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Phaser.NinePatchImage</span>(game, x, y, name);</pre></div>
+
+<p>with <code>name</code> is the reference key you specified before.</p>
+
+<p>To change the measures of the NinePatchImage, change the <code>targetWidth</code> and <code>targetHeight</code> properties. Also, remember that since Phaser.NinePatchImage actually extends Phaser.Image, so you can do anything that you can do on a Phaser.Image instance with a Phaser.NinePatchImage instance. However, in some cases, like with <code>anchor</code>, you have to run the method <code>UpdateImageSizes</code> for the NinePatchImage to be displayed correctly.</p>
+
+<p>Check the example in <code>example</code> folder to see it in action :)</p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h3>
+
+<p>This content is released under the (<a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) MIT License.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/netcell/nine-patch-phaser-plugin">Nine-patch-phaser-plugin</a> is maintained by <a href="https://github.com/netcell">netcell</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
