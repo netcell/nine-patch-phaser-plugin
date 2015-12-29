@@ -15,7 +15,7 @@ export default class NinePatchImage extends Phaser.Image {
 	 * @param {NinePatchCache} ninePatchImages - To be deprecated.
 	 */
 	constructor(game, x = 0, y = 0, key, ninePatchImages) {
-		super(game, x, y);
+		super(game, x, y, PIXI.Texture.emptyTexture);
 		game.add.existing(this);
 		/** Get the NinePatchCache instance */
 		if (!ninePatchImages) {
