@@ -6,7 +6,7 @@ This is not technically a Phaser Plugin. It provides two methods in `game.cache`
 
 The plugin is written using ES6 and compiled with [Babel](babeljs.io) and [Browserify](http://browserify.org/), tested on Phaser 2.1.3 and Phaser 2.4.3.
 
-Feel free to follow me on twitter [@netcell](https://twitter.com/netcell) and check out [my blog](http://anhnt.ninja)!
+Feel free to follow me on twitter [@netcell](https://twitter.com/netcell) and check out [my blog](http://netcell.github.io)!
 
 ## Demo
 
