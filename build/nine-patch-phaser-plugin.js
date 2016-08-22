@@ -36,7 +36,7 @@ var NinePatchCache = (function () {
 		var _images = game.cache._images || game.cache._cache.image;
 		var imageCache = _images[imageKey];
 		/** @type {PIXI.BaseTexture} Get the Base Texture to process */
-		this.baseTexture = PIXI.BaseTextureCache[imageKey] ? PIXI.BaseTextureCache[imageKey] : imageCache.base;
+		this.baseTexture = PIXI.BaseTexture[imageKey] ? PIXI.BaseTexture[imageKey] : imageCache.base;
 		/** @type {Number} Positions and measures of the texture on the base texture */
 		if (imageFrame) {
 			var frameData = imageCache.frameData;
