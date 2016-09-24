@@ -1,10 +1,14 @@
 # Nine Patch Phaser Plugin
 
+**UPDATE**: Unless you are currently using it, or your game is not very complicated, or has no need to run on old mobile devices, I am recommending you not to use this library due to posible performance issues. This is a nice experiment and a modified version of it (specifically designed for a code base of a game, so not gonna be useful publicly released) works pretty well in production. It is possible to look into the `src` folder to understand the library (it's really simple) and modify it to your needs, and I am willing to support you. However, since I am not currently using Phaser, I can't really invest time into updating this old library. Sincerely appologize. Thank you for your interest.
+
 Nine Patch Phaser Plugin allows you to use [nine patch images](https://github.com/chrislondon/9-Patch-Image-for-Websites/wiki/What-Are-9-Patch-Images) in the HTML game framework [Phaser](http://phaser.io).
 
 This is not technically a Phaser Plugin. It provides two methods in `game.cache` to generate nine patch textures and a `Phaser.NinePatchImage` class to create nine patch images from these textures.
 
 The plugin is written using ES6 and compiled with [Babel](babeljs.io) and [Browserify](http://browserify.org/), tested on Phaser 2.1.3 and Phaser 2.4.3.
+
+**UPDATE**: The latest release is supposed to be compatible with Phaser 2.6.1 and above. If you are using an older version, please try using previous releases first.
 
 Feel free to follow me on twitter [@netcell](https://twitter.com/netcell) and check out [my blog](http://netcell.github.io)!
 
